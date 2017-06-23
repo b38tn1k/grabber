@@ -1,0 +1,12 @@
+#!/usr/bin/python
+from grabber import *
+
+stp = Grabber()
+while True:
+	stp.drive()
+	freq = raw_input('enter new frequency: ')
+        if float(freq) == 0:
+            stp.stop()
+            break
+        else:
+            stp.frequency = float(freq)
